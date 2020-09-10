@@ -1,7 +1,8 @@
 export default class View {
-  constructor(){
+  constructor() {
     this.listCard = document.querySelectorAll('li');
   }
+  /* eslint-disable */
   handlingForm(callback) {
     document.getElementById('form').addEventListener('submit', callback);
   }
@@ -11,49 +12,51 @@ export default class View {
   }
 
   addOpacity(clas) {
-    this.listCard.forEach(elem => {
+    this.listCard.forEach((elem) => {
       if (!elem.classList.contains(clas)) {
-        elem.classList.add('hidden')
+        elem.classList.add('hidden');
       }
-    })
+    });
   }
 
   deleteOpacity() {
-    this.listCard.forEach(elem => {
-        elem.classList.remove('hidden')
-    })
+    this.listCard.forEach((elem) => {
+      elem.classList.remove('hidden');
+    });
   }
 
   hidden(bank) {
     switch (bank) {
       case 'AmericanExpress':
-        this.addOpacity('AmericanExpress')
+        this.addOpacity('AmericanExpress');
         break;
       case 'Visa':
-        this.addOpacity('Visa')
+        this.addOpacity('Visa');
         break;
       case 'MasterCard':
-        this.addOpacity('MasterCard')
+        this.addOpacity('MasterCard');
         break;
       case 'JCB':
-        this.addOpacity('JCB')
+        this.addOpacity('JCB');
         break;
       case 'DinersClub':
-        this.addOpacity('DinersClub')
+        this.addOpacity('DinersClub');
         break;
       case 'Discover':
-        this.addOpacity('Discover')
+        this.addOpacity('Discover');
         break;
+      default:
+        return 
     }
   }
 
   showCheckNumber(result) {
     let message = document.querySelector('.message');
-    if(!message){
+    if (!message) {
       message = document.createElement('div');
       message.classList.add('message');
-      document.querySelector('.list').insertAdjacentElement('afterend', message)
+      document.querySelector('.list').insertAdjacentElement('afterend', message);
     }
-    message.textContent = `Card number is ${result}`; 
+    message.textContent = `Card number is ${result}`;
   }
 }

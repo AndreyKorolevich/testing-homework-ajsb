@@ -20,13 +20,23 @@ describe('Check card`s number form', () => {
     await browser.close();
   });
 
-  test('should add .true class for valid number', async () => {
+  test('should add valide id for valid number', async () => {
     await page.goto(baseUrl);
-    const form = await page.$('form');
-    const input = await form.$('text');
+    const form = await page.$('#form');
+    const input = await form.$('#text');
     await input.type('371449635398431');
-    const button = await form.$('button');
+    const button = await form.$('#button');
     button.click();
-    await page.waitFor('[data-id=valid].valid');
+    await page.waitForSelector('[data-id=valide]');
+  });
+
+  test('should add valide id for valid number', async () => {
+    await page.goto(baseUrl);
+    const form = await page.$('#form');
+    const input = await form.$('#text');
+    await input.type('3');
+    const button = await form.$('#button');
+    button.click();
+    await page.waitForSelector('[data-id=invalide]');
   });
 });
