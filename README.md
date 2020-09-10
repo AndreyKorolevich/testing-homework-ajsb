@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/uq80y6b1jgifomdn?svg=true)](https://ci.appveyor.com/project/AndreyKorolevich/testing-homework-ajsb)
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
