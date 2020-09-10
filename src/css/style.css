@@ -1,0 +1,39 @@
+body {
+  background: #eee;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 1px black;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  margin: 0;
+}
+
+.list li {
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+form {
+  display: flex;
+}
+
+.picture img {
+  width: 40px;
+}
+
+.hidden {
+  opacity: 0.3;
+}
